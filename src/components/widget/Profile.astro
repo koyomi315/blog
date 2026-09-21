@@ -5,6 +5,7 @@ import { url } from "../../utils/url-utils";
 import ImageWrapper from "../misc/ImageWrapper.astro";
 
 const config = profileConfig;
+const avatarInitial = config.name.trim().charAt(0);
 ---
 <div class="card-base p-3">
     <a aria-label="Go to About Page" href={url('/about/')}
@@ -16,7 +17,13 @@ const config = profileConfig;
                   class="transition opacity-0 scale-90 group-hover:scale-100 group-hover:opacity-100 text-white text-5xl">
             </Icon>
         </div>
-        <ImageWrapper src={config.avatar || ""} alt="Profile Image of the Author" class="mx-auto lg:w-full h-full lg:mt-0 "></ImageWrapper>
+		{config.avatar ? (
+			<ImageWrapper src={config.avatar} alt={`${config.name}的头像`} class="mx-auto lg:w-full h-full lg:mt-0 "></ImageWrapper>
+		) : (
+			<div class="flex aspect-square w-full items-center justify-center bg-[oklch(0.92_0.04_var(--hue))] text-6xl font-bold text-[var(--primary)] dark:bg-[oklch(0.25_0.03_var(--hue))]">
+				{avatarInitial}
+			</div>
+		)}
     </a>
     <div class="px-2">
         <div class="font-bold text-xl text-center mb-1 dark:text-neutral-50 transition">{config.name}</div>
@@ -36,4 +43,3 @@ const config = profileConfig;
         </div>
     </div>
 </div>
-

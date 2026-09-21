@@ -26,7 +26,8 @@ import { pluginCustomCopyButton } from "./src/plugins/expressive-code/custom-cop
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://fuwari.vercel.app/",
+	// TODO: 部署后替换为博客的真实域名
+	site: "https://example.com/",
 	base: "/",
 	trailingSlash: "always",
 	integrations: [
