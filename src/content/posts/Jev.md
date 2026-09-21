@@ -9,7 +9,7 @@ draft: false
 lang: zh_CN
 ---
 
-# Jev
+# Jev简单学习
 
 ## 是什么？
 
@@ -27,7 +27,7 @@ Jev 是 TypeSafe AI 发布的 System One Model。
 | Score | 打分题 | 连续分数、概率分布与 confidence | 风险或质量评分 |
 | Noul | 判断题 | 0 到 1 的概率 | 是否保留、是否危险等判断 |
 
-**四层架构**（我们）
+**四层架构**
 
 | 层次 | 职责 | 典型组件 |
 | --- | --- | --- |
@@ -50,7 +50,7 @@ System 2：慢、需要推理、成本高、适合复杂问题
   - 基于以上的Jev的特点导致其比较适合特定的任务场景 或者 原来Agent编排或任务编排的某些节点
   - 适合替代 Agent / Workflow 中那些原本需要调用通用 LLM 完成简单判断的节点
 
-**Jev 更像一个 intelligence primitive / decision primitive，而不是完整 Agent。**它可以嵌进 Harness / Workflow 的很多控制节点里，而真正负责复杂 reasoning、planning、generation 的仍然是通用模型。
+**Jev 更像一个 intelligence primitive / decision primitive，而不是完整 Agent。** 它可以嵌进 Harness / Workflow 的很多控制节点里，而真正负责复杂 reasoning、planning、generation 的仍然是通用模型。
 
 ## 总结
 
