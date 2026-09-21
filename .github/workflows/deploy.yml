@@ -40,16 +40,27 @@ jobs:
 
       - name: Configure SSH
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+          SSH_PRIVATE_KEY_B64: ${{ secrets.SERVER_SSH_KEY_B64 }}
           SSH_KNOWN_HOSTS: ${{ secrets.SERVER_KNOWN_HOSTS }}
         run: |
           set -euo pipefail
           umask 077
           mkdir -p "$HOME/.ssh"
-          printf '%s\n' "$SSH_PRIVATE_KEY" > "$HOME/.ssh/deploy_key"
-          printf '%s\n' "$SSH_KNOWN_HOSTS" > "$HOME/.ssh/known_hosts"
+
+          printf '%s' "$SSH_PRIVATE_KEY_B64" \
+            | base64 --decode \
+            > "$HOME/.ssh/deploy_key"
+
+          printf '%s\n' "$SSH_KNOWN_HOSTS" \
+            > "$HOME/.ssh/known_hosts"
+
+          chmod 600 "$HOME/.ssh/deploy_key"
+          chmod 600 "$HOME/.ssh/known_hosts"
+
           test -s "$HOME/.ssh/deploy_key"
           test -s "$HOME/.ssh/known_hosts"
+
+          ssh-keygen -y -f "$HOME/.ssh/deploy_key" > /dev/null
 
       - name: Deploy dist to server
         env:
