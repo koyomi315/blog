@@ -1,10 +1,10 @@
 ---
 title: Jev
 published: 2026-09-21
-description: '简单学习Jev'
+description: 了解面向路由、评分和门禁等场景的类型化概率决策模型 Jev。
 image: ''
-tags: [Agent]
-category: 'Agent前沿知识'
+tags: [AI Agent, Model Routing, Decision Model]
+category: AI Agent
 draft: false
 lang: zh_CN
 ---
