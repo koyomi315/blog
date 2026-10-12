@@ -6,6 +6,9 @@
     },
     "interview-experience/百度一面.md": {
       "post": "src/content/posts/baidu-llm-engineer-round-1/index.md"
+    },
+    "interview-experience/荣耀-通用软件开发工程师-一面/荣耀一面.md": {
+      "post": "src/content/posts/honor-general-software-engineer-round-1/index.md"
     }
   }
 }
