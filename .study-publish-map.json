@@ -3,6 +3,9 @@
   "sources": {
     "docs/agent-eval-study/Langfuse_Core-Concepts.md": {
       "post": "src/content/posts/langfuse-core-concepts/index.md"
+    },
+    "interview-experience/百度一面.md": {
+      "post": "src/content/posts/baidu-llm-engineer-round-1/index.md"
     }
   }
 }
