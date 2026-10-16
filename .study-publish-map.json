@@ -15,6 +15,9 @@
     },
     "interview-experience/通号低空智能科技-软件开发工程师-一面/通号低空智能科技一面.md": {
       "post": "src/content/posts/tonghao-low-altitude-software-engineer-round-1/index.md"
+    },
+    "interview-experience/米哈游-agent开发工程师-一面/米哈游一面.md": {
+      "post": "src/content/posts/mihoyo-agent-engineer-round-1/index.md"
     }
   }
 }
