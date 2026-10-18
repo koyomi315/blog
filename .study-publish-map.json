@@ -18,6 +18,9 @@
     },
     "interview-experience/米哈游-agent开发工程师-一面/米哈游一面.md": {
       "post": "src/content/posts/mihoyo-agent-engineer-round-1/index.md"
+    },
+    "interview-experience/航旅纵横-一面/航旅纵横一面.md": {
+      "post": "src/content/posts/umetrip-round-1/index.md"
     }
   }
 }
