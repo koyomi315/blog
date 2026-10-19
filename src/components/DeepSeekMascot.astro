@@ -1,0 +1,139 @@
+---
+import { url } from "../utils/url-utils";
+---
+
+<deepseek-mascot
+    aria-label="DeepSeek 看板娘"
+    data-model={url('/live2d/deepseek/c_0120.model3.json')}
+    data-vendor={url('/live2d/vendor/live2d-vendor.js')}
+    data-core={url('/live2d/vendor/live2dcubismcore.min.js')}
+    data-state="loading"
+>
+    <button class="mascot-restore" aria-label="展开 DeepSeek 看板娘" hidden>🐳 <span>DeepSeek</span></button>
+    <div class="mascot-body">
+        <p class="mascot-message" role="status" aria-live="polite">一只小鲸鱼正在游过来…</p>
+        <div class="mascot-stage" role="button" tabindex="0" aria-label="摸摸或拖动 DeepSeek 看板娘" title="点一下摸摸，按住可以拖动"></div>
+        <div class="mascot-tools">
+            <button class="mascot-drag" aria-label="拖动看板娘" title="拖动位置">⠿</button>
+            <button class="mascot-pat" aria-label="摸摸 DeepSeek 看板娘" title="摸摸">摸摸</button>
+            <button class="mascot-hide" aria-label="收起 DeepSeek 看板娘" title="收起">收起</button>
+            <details class="mascot-credit">
+                <summary aria-label="看板娘来源与署名" title="来源与署名">ⓘ</summary>
+                <div class="mascot-credit-panel">
+                    <strong>DeepSeek 同人鲸鱼娘</strong>
+                    <p>角色原作：<a href="https://www.pixiv.net/users/62155430" target="_blank" rel="noopener noreferrer">上善无形</a><br />
+                    二次设计：<a href="https://www.pixiv.net/users/18604994" target="_blank" rel="noopener noreferrer">ZipZipPipe</a><br />
+                    Live2D：<a href="https://space.bilibili.com/11272072" target="_blank" rel="noopener noreferrer">氵六青</a></p>
+                    <p>素材未修改 · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener noreferrer">CC BY-NC-SA 4.0</a></p>
+                    <a href="https://github.com/A8Chann/dsh-pet-live2d" target="_blank" rel="noopener noreferrer">模型来源 ↗</a>
+                </div>
+            </details>
+        </div>
+    </div>
+</deepseek-mascot>
+
+<style>
+    deepseek-mascot {
+        position: fixed;
+        left: 12px;
+        bottom: 12px;
+        z-index: 40;
+        width: 220px;
+        color: var(--deep-text);
+        font-size: 13px;
+        pointer-events: none;
+        user-select: none;
+    }
+    .mascot-body { position: relative; }
+    .mascot-stage {
+        width: 220px;
+        height: 260px;
+        pointer-events: auto;
+        cursor: grab;
+        touch-action: none;
+        border-radius: 16px;
+    }
+    .mascot-stage:active { cursor: grabbing; }
+    .mascot-stage:focus-visible { outline: 2px solid var(--primary); outline-offset: -4px; }
+    .mascot-stage :global(canvas) { width: 100%; height: 100%; display: block; }
+    .mascot-message {
+        margin: 0 4px 4px;
+        padding: 10px 14px;
+        border-radius: 16px 16px 16px 4px;
+        background: var(--card-bg);
+        color: var(--btn-content);
+        box-shadow: 0 3px 18px #0000000d;
+        text-align: center;
+        line-height: 1.6;
+    }
+    .mascot-message:empty { visibility: hidden; }
+    .mascot-tools {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        pointer-events: auto;
+        width: fit-content;
+        margin: 0 auto;
+        padding: 4px;
+        border-radius: 14px;
+        background: var(--card-bg);
+        box-shadow: 0 3px 18px #0000000d;
+    }
+    button, summary {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 36px;
+        min-width: 32px;
+        padding: 4px 8px;
+        border-radius: 10px;
+        color: var(--btn-content);
+        cursor: pointer;
+        list-style: none;
+    }
+    summary::-webkit-details-marker { display: none; }
+    button:hover, summary:hover { background: var(--btn-regular-bg); }
+    button:focus-visible, summary:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+    .mascot-drag { cursor: grab; touch-action: none; font-size: 22px; }
+    .mascot-drag:active { cursor: grabbing; }
+    .mascot-restore {
+        background: var(--card-bg);
+        box-shadow: 0 3px 18px #00000014;
+        gap: 7px;
+        pointer-events: auto;
+        padding: 8px 14px;
+        min-height: 44px;
+        border-radius: 24px;
+        font-weight: 600;
+    }
+    [hidden] { display: none !important; }
+    .mascot-credit { position: relative; }
+    .mascot-credit-panel {
+        position: absolute;
+        bottom: 46px;
+        left: -148px;
+        width: 224px;
+        max-height: 65vh;
+        overflow-y: auto;
+        padding: 16px;
+        border-radius: 16px;
+        background: var(--card-bg);
+        color: var(--btn-content);
+        box-shadow: 0 5px 30px #00000020;
+        line-height: 1.8;
+        user-select: text;
+    }
+    .mascot-credit-panel p { margin: 8px 0; }
+    .mascot-credit-panel a { text-decoration: underline; text-underline-offset: 3px; }
+    deepseek-mascot[data-collapsed="true"] { width: fit-content; }
+    deepseek-mascot[data-state="error"] .mascot-stage { height: 0; }
+    @media (max-width: 767px) {
+        deepseek-mascot { left: 8px; bottom: max(8px, env(safe-area-inset-bottom)); }
+    }
+</style>
+
+<script>
+    import { registerDeepSeekMascot } from "./mascot/deepseek-mascot";
+    registerDeepSeekMascot();
+</script>

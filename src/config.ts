@@ -15,12 +15,12 @@ export const siteConfig: SiteConfig = {
 	subtitle: "后端开发 · AI Agent · Agent 评测",
 	lang: "zh_CN", // Language code, e.g. 'en', 'zh_CN', 'ja', etc.
 	themeColor: {
-		hue: 215, // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
-		fixed: true, // Hide the theme color picker for visitors
+		hue: 300, // Lavender to complement the twilight banner
+		fixed: false, // Let visitors choose their own theme color
 	},
 	banner: {
-		enable: false,
-		src: "assets/images/banner.png", // Replace src/assets/images/banner.png and set enable to true when ready
+		enable: true,
+		src: "assets/images/twilight-banner.webp", // Generated anime landscape, optimized locally
 		position: "center", // Equivalent to object-position, only supports 'top', 'center', 'bottom'. 'center' by default
 		credit: {
 			enable: false, // Display the credit text of the banner image
