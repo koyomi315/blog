@@ -21,6 +21,9 @@
     },
     "interview-experience/航旅纵横-一面/航旅纵横一面.md": {
       "post": "src/content/posts/umetrip-round-1/index.md"
+    },
+    "interview-experience/字节-后端开发-火山引擎-一面/字节一面.md": {
+      "post": "src/content/posts/bytedance-volcano-backend-round-1/index.md"
     }
   }
 }
