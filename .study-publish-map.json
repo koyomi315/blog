@@ -24,6 +24,9 @@
     },
     "interview-experience/字节-后端开发-火山引擎-一面/字节一面.md": {
       "post": "src/content/posts/bytedance-volcano-backend-round-1/index.md"
+    },
+    "interview-experience/拼多多-agent开发-一面/拼多多一面.md": {
+      "post": "src/content/posts/pinduoduo-agent-engineer-round-1/index.md"
     }
   }
 }
