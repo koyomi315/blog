@@ -27,6 +27,15 @@
     },
     "interview-experience/拼多多-agent开发-一面/拼多多一面.md": {
       "post": "src/content/posts/pinduoduo-agent-engineer-round-1/index.md"
+    },
+    "interview-experience/小红书-AI全栈工程师-一面/小红书一面.md": {
+      "post": "src/content/posts/xiaohongshu-ai-fullstack-engineer-round-1/index.md"
+    },
+    "interview-experience/堡垒实验室-后端开发-一面/堡垒实验室一面.md": {
+      "post": "src/content/posts/baolei-lab-backend-engineer-round-1/index.md"
+    },
+    "interview-experience/中科曙光-一面/中科曙光一面.md": {
+      "post": "src/content/posts/sugon-round-1/index.md"
     }
   }
 }
