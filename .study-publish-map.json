@@ -36,6 +36,12 @@
     },
     "interview-experience/中科曙光-一面/中科曙光一面.md": {
       "post": "src/content/posts/sugon-round-1/index.md"
+    },
+    "interview-experience/得物-java后端开发-一面/得物一面.md": {
+      "post": "src/content/posts/dewu-java-backend-round-1/index.md"
+    },
+    "interview-experience/拼多多-agent开发-二面/拼多多二面.md": {
+      "post": "src/content/posts/pinduoduo-agent-engineer-round-2/index.md"
     }
   }
 }
